@@ -1,5 +1,5 @@
 % Class Identifier and Version
-\ProvidesClass{kyvernitis-resume}[2023/06/06 Kyvernitis class]
+\ProvidesClass{template}[2024/03/12 Template]
 \NeedsTeXFormat{LaTeX2e}
 
 % Set font size and paper type
@@ -48,7 +48,7 @@
 % Define new resizable bullet with default 0.7 size for later use
 % Taken from https://tex.stackexchange.com/questions/534192/medium-sized-circle-as-a-bullet
 \newcommand{\vbullet}[1][.7]{\mathbin{\ThisStyle{\vcenter{\hbox{%
-  \scalebox{#1}{$\SavedStyle\bullet$}}}}}%
+                    \scalebox{#1}{$\SavedStyle\bullet$}}}}}%
 }
 
 % Setup Hyperlink style
@@ -60,33 +60,33 @@
 % Define some social accounts and contact information formats
 \newcommand{\linkedin}[1]{
     \href{https://linkedin.com/in/#1}{\textcolor{black}
-    {\faLinkedinIn}\hspace{0.5em}#1}
+        {\faLinkedinIn}\hspace{0.5em}#1}
 }
 \newcommand{\email}[1]{
     \href{mailto:#1}{\textcolor{black}
-    {\faEnvelope[regular]}\hspace{0.5em}#1}
+        {\faEnvelope[regular]}\hspace{0.5em}#1}
 }
 \newcommand{\github}[1]{
     \href{https://github.com/#1}{\textcolor{black}
-    {\faGithub}\hspace{0.5em}#1}
+        {\faGithub}\hspace{0.5em}#1}
 }
 \newcommand{\twitter}[1]{
     \href{https://twitter.com/#1}{\textcolor{black}
-    {\faTwitter}\hspace{0.5em}#1}
+        {\faTwitter}\hspace{0.5em}#1}
 }
 \newcommand{\facebook}[1]{
     \href{https://www.facebook.com/#1}{\textcolor{black}
-    {\faFacebookF}\hspace{0.5em}#1}
+        {\faFacebookF}\hspace{0.5em}#1}
 }
 \newcommand{\website}[1]{
     \href{https://#1}{\textcolor{black}
-    {\faGlobeAmericas}\hspace{0.5em}#1}
+        {\faGlobeAmericas}\hspace{0.5em}#1}
 }
 \newcommand{\phone}[1]{
     \textcolor{black}{\faPhone*}\hspace{0.5em}#1
 }
 \newcommand{\nationality}[1]{
-    \textcolor{black}{\faFlagUsa}\hspace{0.5em}#1
+    \textcolor{black}{\faFlag}\hspace{0.5em}#1
 }
 \newcommand{\address}[1]{
     \textcolor{black}{\faMapMarker*}\hspace{0.5em}#1
@@ -108,19 +108,20 @@
     % \phantomsection
     % \addcontentsline{toc}{chapter}{\@name}
     \begin{tabularx}{\textwidth}{Xr}{
-        \begin{tabular}[c]{l}
-            \fontsize{35}{45}\selectfont{\color{navyblue}{\textbf{\@name}}}
-            \ifx\empty\@title\empty\else
+            \begin{tabular}[c]{l}
+                \fontsize{18}{25}\selectfont{\color{navyblue}{\textbf{Matheus Vinícius}}} \\
+                \fontsize{18}{25}\selectfont{\color{navyblue}{\textbf{Resende Nascimento}}}
+                \ifx\empty\@title\empty\else
                 \\ \textit{\small\@title}
-            \fi
-       \end{tabular}
-    } & {
-        \begin{tabular}[c]{l@{\hspace{1em}}l}
-            \entry{\small#4}{\small#1}
-            \entry{\small#5}{\small#2}
-            \entry{\small#6}{\small#3}
-        \end{tabular}
-    }
+                \fi
+            \end{tabular}
+        } & {
+                \begin{tabular}[c]{l@{\hspace{1em}}l}
+                    \entry{\small#4}{\small#1}
+                    \entry{\small#5}{\small#2}
+                    \entry{\small#6}{\small#3}
+                \end{tabular}
+            }
     \end{tabularx}
 }
 
@@ -133,10 +134,10 @@
     \medskip
     {\color{navyblue}\hrule}
     \begin{list}{}{
-        \setlength{\leftmargin}{1.5em}
-    }
-    \item[]
-}{
+            \setlength{\leftmargin}{1.5em}
+        }
+        \item[]
+              }{
     \end{list}
 }
 
@@ -150,12 +151,12 @@
     \textit{#2} \hfill \textit{#4}
     \smallskip
     \begin{list}{$\vbullet$}{
-        \leftmargin=2em
-    }
-    \itemsep -0.5em \vspace{-0.5em}
-}{
+            \leftmargin=2em
+        }
+        \itemsep -0.5em \vspace{-0.5em}
+        }{
     \end{list}
-    \vspace{0.5em}
+    % \vspace{0.5em}
 }
 
 
@@ -169,10 +170,10 @@
     \textit{#2} \hfill \textit{#4}
     \smallskip
     \begin{list}{}{
-        \leftmargin=0em \itemindent=0em \labelwidth=0em \labelsep=0em
-    }
-    \itemsep -0.7em \vspace{-0.7em}
-}{
+            \leftmargin=0em \itemindent=0em \labelwidth=0em \labelsep=0em
+        }
+        \itemsep -0.7em \vspace{-0.7em}
+        }{
     \end{list}
 }
 
@@ -181,10 +182,10 @@
 % #1: Name of the section, #2: Body of the section
 \newcommand{\sectiontable}[2]{
     \begin{section}{#1}
-        \begin{adjustwidth}{0.0in}{0.1in}
-            \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{5ex}} X @{}}
-                #2
-            \end{tabularx}
-        \end{adjustwidth}
+     \begin{adjustwidth}{0.0in}{0.1in}
+         \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{5ex}} X @{}}
+             #2
+         \end{tabularx}
+     \end{adjustwidth}
     \end{section}
 }

@@ -168,6 +168,13 @@
     \addcontentsline{toc}{subsection}{#1}
     \textbf{#1} \hfill \textit{#3} \newline
     \textit{#2} \hfill \textit{#4}
+}
+
+\newenvironment{subsectionlist}[4]{
+    \phantomsection
+    \addcontentsline{toc}{subsection}{#1}
+    \textbf{#1} \hfill \textit{#3} \newline
+    \textit{#2} \hfill \textit{#4}
     \smallskip
     \begin{list}{}{
             \leftmargin=0em \itemindent=0em \labelwidth=0em \labelsep=0em
@@ -176,6 +183,7 @@
         }{
     \end{list}
 }
+
 
 % Define new sectiontable command, which makes a section with a table
 % All arguments are compulsory
